@@ -9,21 +9,34 @@
 /* Begin PBXBuildFile section */
 		5B3F6F4C2A002E9500D613C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F6F4B2A002E9500D613C8 /* AppDelegate.swift */; };
 		5B3F6F4E2A002E9500D613C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F6F4D2A002E9500D613C8 /* SceneDelegate.swift */; };
-		5B3F6F502A002E9500D613C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F6F4F2A002E9500D613C8 /* ViewController.swift */; };
-		5B3F6F532A002E9500D613C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F6F512A002E9500D613C8 /* Main.storyboard */; };
 		5B3F6F552A002E9600D613C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F6F542A002E9600D613C8 /* Assets.xcassets */; };
 		5B3F6F582A002E9600D613C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F6F562A002E9600D613C8 /* LaunchScreen.storyboard */; };
+		5B3F6F632A002FAD00D613C8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F6F622A002FAD00D613C8 /* FeedViewController.swift */; };
+		5B3F6F662A00308700D613C8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B3F6F652A00308700D613C8 /* SnapKit */; };
+		5B3F6F692A00360900D613C8 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F6F682A00360900D613C8 /* LogoView.swift */; };
+		5BE37A8D2A018B1A00671834 /* FeedItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A8C2A018B1A00671834 /* FeedItemType.swift */; };
+		5BE37A8F2A018B9D00671834 /* FeedStoriesItemCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A8E2A018B9D00671834 /* FeedStoriesItemCellInfo.swift */; };
+		5BE37A912A018C9E00671834 /* FeedPostItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A902A018C9E00671834 /* FeedPostItemInfo.swift */; };
+		5BE37A962A01911A00671834 /* FeedStoriesSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A952A01911A00671834 /* FeedStoriesSetCell.swift */; };
+		5BE37A982A0191A100671834 /* FeedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A972A0191A100671834 /* FeedPostCell.swift */; };
+		5BE37A9A2A0197B100671834 /* StoriesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE37A992A0197B100671834 /* StoriesItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B3F6F482A002E9500D613C8 /* instagram_Replica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_Replica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3F6F4B2A002E9500D613C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3F6F4D2A002E9500D613C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B3F6F4F2A002E9500D613C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B3F6F522A002E9500D613C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B3F6F542A002E9600D613C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3F6F572A002E9600D613C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3F6F592A002E9600D613C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B3F6F622A002FAD00D613C8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		5B3F6F682A00360900D613C8 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		5BE37A8C2A018B1A00671834 /* FeedItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemType.swift; sourceTree = "<group>"; };
+		5BE37A8E2A018B9D00671834 /* FeedStoriesItemCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoriesItemCellInfo.swift; sourceTree = "<group>"; };
+		5BE37A902A018C9E00671834 /* FeedPostItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostItemInfo.swift; sourceTree = "<group>"; };
+		5BE37A952A01911A00671834 /* FeedStoriesSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoriesSetCell.swift; sourceTree = "<group>"; };
+		5BE37A972A0191A100671834 /* FeedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostCell.swift; sourceTree = "<group>"; };
+		5BE37A992A0197B100671834 /* StoriesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3F6F662A00308700D613C8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,61 @@
 		5B3F6F4A2A002E9500D613C8 /* instagram_Replica */ = {
 			isa = PBXGroup;
 			children = (
+				5B3F6F5F2A002EB300D613C8 /* Application */,
+				5B3F6F672A0035F300D613C8 /* Views */,
+				5B3F6F612A002F9A00D613C8 /* Feed */,
+				5B3F6F602A002EBE00D613C8 /* Resources */,
+			);
+			path = instagram_Replica;
+			sourceTree = "<group>";
+		};
+		5B3F6F5F2A002EB300D613C8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				5B3F6F4B2A002E9500D613C8 /* AppDelegate.swift */,
 				5B3F6F4D2A002E9500D613C8 /* SceneDelegate.swift */,
-				5B3F6F4F2A002E9500D613C8 /* ViewController.swift */,
-				5B3F6F512A002E9500D613C8 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5B3F6F602A002EBE00D613C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5B3F6F542A002E9600D613C8 /* Assets.xcassets */,
 				5B3F6F562A002E9600D613C8 /* LaunchScreen.storyboard */,
 				5B3F6F592A002E9600D613C8 /* Info.plist */,
 			);
-			path = instagram_Replica;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B3F6F612A002F9A00D613C8 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F6F622A002FAD00D613C8 /* FeedViewController.swift */,
+				5BE37A8C2A018B1A00671834 /* FeedItemType.swift */,
+				5BE37A8E2A018B9D00671834 /* FeedStoriesItemCellInfo.swift */,
+				5BE37A902A018C9E00671834 /* FeedPostItemInfo.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		5B3F6F672A0035F300D613C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BE37A942A0190F400671834 /* Cells */,
+				5B3F6F682A00360900D613C8 /* LogoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BE37A942A0190F400671834 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BE37A952A01911A00671834 /* FeedStoriesSetCell.swift */,
+				5BE37A972A0191A100671834 /* FeedPostCell.swift */,
+				5BE37A992A0197B100671834 /* StoriesItemCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +143,9 @@
 			dependencies = (
 			);
 			name = instagram_Replica;
+			packageProductDependencies = (
+				5B3F6F652A00308700D613C8 /* SnapKit */,
+			);
 			productName = instagram_Replica;
 			productReference = 5B3F6F482A002E9500D613C8 /* instagram_Replica.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 5B3F6F3F2A002E9500D613C8;
+			packageReferences = (
+				5B3F6F642A00308700D613C8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 5B3F6F492A002E9500D613C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +193,6 @@
 			files = (
 				5B3F6F582A002E9600D613C8 /* LaunchScreen.storyboard in Resources */,
 				5B3F6F552A002E9600D613C8 /* Assets.xcassets in Resources */,
-				5B3F6F532A002E9500D613C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +203,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B3F6F502A002E9500D613C8 /* ViewController.swift in Sources */,
+				5BE37A912A018C9E00671834 /* FeedPostItemInfo.swift in Sources */,
 				5B3F6F4C2A002E9500D613C8 /* AppDelegate.swift in Sources */,
+				5B3F6F692A00360900D613C8 /* LogoView.swift in Sources */,
+				5B3F6F632A002FAD00D613C8 /* FeedViewController.swift in Sources */,
+				5BE37A9A2A0197B100671834 /* StoriesItemCell.swift in Sources */,
+				5BE37A962A01911A00671834 /* FeedStoriesSetCell.swift in Sources */,
+				5BE37A8D2A018B1A00671834 /* FeedItemType.swift in Sources */,
+				5BE37A982A0191A100671834 /* FeedPostCell.swift in Sources */,
 				5B3F6F4E2A002E9500D613C8 /* SceneDelegate.swift in Sources */,
+				5BE37A8F2A018B9D00671834 /* FeedStoriesItemCellInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B3F6F512A002E9500D613C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B3F6F522A002E9500D613C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B3F6F562A002E9600D613C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +353,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7B2Y45548;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = instagram_Replica/Info.plist;
+				INFOPLIST_FILE = instagram_Replica/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +381,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R7B2Y45548;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = instagram_Replica/Info.plist;
+				INFOPLIST_FILE = instagram_Replica/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B3F6F642A00308700D613C8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B3F6F652A00308700D613C8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B3F6F642A00308700D613C8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B3F6F402A002E9500D613C8 /* Project object */;
 }
