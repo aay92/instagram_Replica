@@ -42,6 +42,7 @@ extension FeedViewController {
       
         ///add object and constrain
         view.addSubview(tableView)
+      
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -85,7 +86,6 @@ extension FeedViewController: UITableViewDataSource {
         switch item {
         case .stories(let info):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FeedStoriesSetCell.self), for: indexPath) as! FeedStoriesSetCell
-            cell.textLabel?.text = "1234"
             cell.configure(with: info)
             return cell
         case .post(let post):

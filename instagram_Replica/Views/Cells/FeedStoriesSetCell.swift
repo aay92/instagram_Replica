@@ -15,13 +15,11 @@ class FeedStoriesSetCell: UITableViewCell {
         print(info)
         collectionView.reloadData()
     }
-    ///обьявили о collectionView
-    private var collectionView: UICollectionView!
-    private var items: FeedStoriesCellInfo = []
     
     //MARK: - init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         initialize()
     }
     
@@ -31,31 +29,40 @@ class FeedStoriesSetCell: UITableViewCell {
     private enum UIConstants {
         static let collectionViewHight: CGFloat = 106
         static let cellWidth: CGFloat = 72
-        static let cellHeight: CGFloat = 98
+        static let cellHeight: CGFloat = 76
     }
+    
+    ///обьявили о collectionView
+    private var collectionView: UICollectionView!
+    private var items: FeedStoriesCellInfo = []
 }
 
 //MARK: - Private methods
 ///private extension - Все методы будут приватными
 private extension FeedStoriesSetCell {
     func initialize(){
+        
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         ///инитиализируем collectionView (.zero - не важен фрейм при инит)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(StoriesItemCell.self, forCellWithReuseIdentifier: String(describing: StoriesItemCell.self))
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.addSubview(contentView)
+        
+        contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.height.equalTo(105)
+            make.height.equalTo(UIConstants.cellHeight)
         }
     }
 }
 //MARK: - UICollectionViewDataSource
 extension FeedStoriesSetCell: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        items.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

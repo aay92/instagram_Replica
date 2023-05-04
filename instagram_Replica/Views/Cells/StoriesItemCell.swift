@@ -12,7 +12,8 @@ class StoriesItemCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let image = UIImageView()
-        
+        image.layer.cornerRadius = UIConstants.imageSize / 2
+        image.clipsToBounds = true
         return image
     }()
     
@@ -31,18 +32,18 @@ class StoriesItemCell: UICollectionViewCell {
     }
     
     private enum UIConstants {
-        static let imageSize: CGFloat = 160
-        static let imageCellInset: CGFloat = 6
+        static let imageSize: CGFloat = 59
+        static let imageCellInset: CGFloat = 8
     }
 }
 
 private extension StoriesItemCell{
     func initialise(){
+//        backgroundColor = .black
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.size.equalTo(UIConstants.imageSize)
-            make.leading.top.trailing.equalToSuperview().inset(UIConstants.imageCellInset)
-            
+            make.leading.top.trailing.bottom.equalToSuperview().inset(UIConstants.imageCellInset)
         }
     }
 }
