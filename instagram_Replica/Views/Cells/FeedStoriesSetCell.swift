@@ -29,7 +29,7 @@ class FeedStoriesSetCell: UITableViewCell {
     private enum UIConstants {
         static let collectionViewHight: CGFloat = 106
         static let cellWidth: CGFloat = 72
-        static let cellHeight: CGFloat = 76
+        static let cellHeight: CGFloat = 98
     }
     
     ///обьявили о collectionView

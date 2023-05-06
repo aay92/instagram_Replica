@@ -35,7 +35,8 @@ extension FeedViewController {
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
         navigationItem.rightBarButtonItems = makeRightBarButtonItems()
         self.tableView.dataSource = self
-//        self.tableView.delegate = self
+        self.tableView.delegate = self
+        self.tableView.separatorColor = .clear
         
         tableView.register(FeedStoriesSetCell.self, forCellReuseIdentifier: String(describing:FeedStoriesSetCell.self))
         tableView.register(FeedPostCell.self, forCellReuseIdentifier: String(describing: FeedPostCell.self))
