@@ -18,7 +18,12 @@ class FeedViewController: UIViewController {
             FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: true),
             FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: true),
             FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: false)])]
+            FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: false)]),
+        .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+        .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+        .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+        .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+    ]
         
     //MARK: - lifecycle
     override func viewDidLoad() {
@@ -29,7 +34,7 @@ class FeedViewController: UIViewController {
 
 extension FeedViewController {
     func initialize() {
-        
+
         view.backgroundColor = .white
         navigationController?.navigationBar.tintColor = .black
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
