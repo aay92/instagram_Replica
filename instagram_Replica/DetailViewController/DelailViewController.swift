@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
     
     @objc func tabButtonSendMockData(){
         delegate?.getOtherMockData(items: atherMockData.items)
-//        closure?(atherMockData.items)
+        closure?(atherMockData.items)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true)
     }
