@@ -8,11 +8,17 @@
 import UIKit
 import SnapKit
 
+protocol FeedViewDelegate {
+    func sendTextOnDetailView(number: Int)
+}
+
 class FeedViewController: UIViewController {
     
     private let tableView = UITableView()
     
-    private var items : [FeedItemType] = [
+     var delegate: FeedViewDelegate? = nil
+    
+     var items: [FeedItemType] = [
         .stories([
             FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: true, isNewStory: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: true),
@@ -24,7 +30,25 @@ class FeedViewController: UIViewController {
         .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
         .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
     ]
-        
+    
+    var items1: [FeedItemType] = [
+       .stories([
+           FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: true, isNewStory: false),
+           FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: true),
+           FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: true),
+           FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: false),
+           FeedStoriesItemCellInfo(image: UIImage(named: "sabaka")!, userName: "user123", isAddButtonVisible: false, isNewStory: false)]),
+       .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+       .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+       .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+       .post(FeedPostItemInfo(userImage: UIImage(named: "sabaka")!, userName: "some_text", postSubTitle: "Sponsered", postImage: UIImage(named: "sabaka")!, numberOfLikes: 123, comment: CommentShortInfo(userName: "Author_god", commentText: "hahaha"))),
+   ]
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+
+    }
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +72,6 @@ extension FeedViewController {
       
         ///add object and constrain
         view.addSubview(tableView)
-      
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -74,7 +97,10 @@ extension FeedViewController {
     func makeDropDownMenu() -> UIMenu {
         let subsItem = UIAction(title: "Подписки", image: UIImage(systemName: "person.2")) { _ in
             print("Subs")
+            self.items = self.items1
+            self.tableView.reloadData()
         }
+        
         let faveItems = UIAction(title: "Избраное", image: UIImage(systemName: "srar")) { _ in
             print("Favorits")
         }
@@ -103,5 +129,25 @@ extension FeedViewController: UITableViewDataSource {
 }
 
 extension FeedViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chagedImages = DetailViewController()
+       
+//        chagedImages.closure = { [weak self] (value) in
+//            print("value \(value)")
+//            self!.items = value
+//        }
+        self.delegate = chagedImages
+        chagedImages.delegate = self
+        let number = indexPath.item
+        delegate?.sendTextOnDetailView(number: number)
+        navigationController?.pushViewController(chagedImages, animated: true)
+        
+    }
+}
+
+extension FeedViewController: DetailViewDelegate {
+    func getOtherMockData(items: [FeedItemType]) {
+        self.items = items
+        self.tableView.reloadData()
+    }
 }

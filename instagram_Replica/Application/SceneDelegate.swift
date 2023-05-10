@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let vc = FeedViewController()
         window.rootViewController = UINavigationController(rootViewController: vc)
+        
+
         self.window = window
         window.makeKeyAndVisible()
     }
